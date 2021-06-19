@@ -1,0 +1,27 @@
+
+May 2019
+
+=> git clone https://stash.desy.de/scm/rda/eudaq53.git 
+
+required: ROOT
+=> 	  echo $ROOTSYS
+	  if empty:
+=> 	  source /usr/bin/thisroot.sh
+	  (or wherever your ROOT is installed)
+
+the C++ version is defined in
+eudaq17/cmake/Platform.cmake
+set (CMAKE_CXX_STANDARD 11)
+or
+set (CMAKE_CXX_STANDARD 14)
+or
+set (CMAKE_CXX_STANDARD 17)
+whatever works for you (depends on gcc version used for ROOT)
+
+=> mkdir build
+=> cd build
+=> cmake ..
+=> make
+=> make install
+
+=> export LD_LIBRARY_PATH=($LD_LIBRARY_PATH):../lib

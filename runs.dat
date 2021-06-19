@@ -1,0 +1,181 @@
+
+# runs list for scope DUT analysis
+# format:
+# tagname value (rest of the line is ignored)
+# known tags up to the run under study are parsed
+# (entries below the run under study are ignored)
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Aug 2019: Duranta TB22
+
+geo geo_2019_08a.dat = 0 20 39 59 79 99
+
+GeV 4.8
+
+# Mimosa thr 5
+run  9  390.5k
+
+# Mimosa thr 4
+run 10  129.3k
+
+run 11
+
+GeV 5.6
+run 12
+
+# Mimosa thr 3
+run 14
+
+# lower entire telescope by 4 mm
+run 15
+
+# raise 1st paddle scint
+run 16
+
+# swap paddle scint
+run 18
+
+# remove Pb insert collimator
+run 20
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Tue 6.8.2019
+# Duranta TB 22
+
+# decrease threshold of column 10,11 in plane 5 (160->159),(155->154) [general threshold 3]
+
+run 22
+			
+# decrease threshold of column 10,11 in plane 5 (159->158),(154->153)[gen threshold 3]
+run 23		Threshold 3 has highest efficiency and resolution
+			
+# decrease threshold of column 10,11 in plane 6 (159->157),(138->137) [gen threshold 3]
+run 24		column 13 of plane 6 was too noisy
+
+# increase threshold of column 13 in plane 6(124->125) [gen threshold 3]
+run 25
+ 			
+# Changes in threshold 4 column10 and 11:
+# Pos5 = plane6 (163->161,143->141), pos4=plane5(159->157, 165->162, column13: 138->137) 420 Hz
+run 26	538 K	 Plane 2 had noise in column 13
+			
+# Pos1 = plane2 (column13: 129->127) 490 Hz
+run 27	267.4 K	
+			
+# Changes in threshold 5, column 10, 11 and 13:			
+#Pos1 = plane2 ( 124->123, 183-> 182, 134-> 131)
+run 28	534.1 K 	
+
+#Pos4 = plane5 ( 164->162,169->167, 143->142)			
+#Pos5 = plane6 (167->165, 147->145, 133->132)			
+
+# - -  - - - - -  - - - - - - - - - -  - - - - - - - - - - 
+# empty telescope Duranta, 75 mm spacing
+
+geo geo_2019_08b.dat 0 75 150 224 299 374			
+
+# Threshold 3 with new values 
+
+GeV 5.6 (420 Hz)
+run 31	311.9k
+
+GeV 4.8  ( 899Hz)
+run 32	259k	
+
+GeV 3.6 ( 1516 Hz)
+run 33	268.5k	
+
+GeV 2.4 (2131 Hz)
+run 34	273.8k	
+
+GeV 1.8 (2387 Hz)
+run 35	268.5k	
+
+GeV 1.2 (2754 Hz)
+run 36	 267.2k	
+
+GeV 6.0 (170 Hz)
+run 37	678.5k
+
+#----------------------------------
+# Apr 2019 TB21 
+chip 334 FBK 3D 50x50x130 irradiated to 1E16 neq/cm2 at CERN PS
+fifty 1
+
+tilt 3
+turn 0
+GeV 5.2
+
+geo geo_2019_04a.dat # = 0  153  305  543  696  847
+
+# bias 40 V, 57.5 uA
+modrun 678
+run 35965
+
+# bias 50 V, 63 uA
+modrun 679		
+run 35966
+
+# bias 60 V, 68 uA
+modrun 680
+run 35967
+
+# bias 70 V, 71 uA
+modrun 681
+run 35968
+
+# bias 80 V, 75 uA
+modrun 682
+run 35969
+
+# bias 90 V, 79 uA
+modrun 683
+run 35970
+
+# bias 100 V, 84 uA
+modrun 684
+run 35971
+
+# bias 110 V, 87 uA
+modrun 685
+run 35972
+
+# bias 120 V, 91 uA
+modrun 686
+run 35973
+
+# bias 130 V, 95 uA
+modrun 687
+run 35974
+
+# bias 140 V, 101 uA
+modrun 688
+run 35975
+
+# bias 150 V, 106 uA
+modrun 689
+run 35976
+
+# bias 160 V, 113 uA
+modrun 690
+run 35977
+
+# bias 170 V, 119 uA
+modrun 691
+run 35978  250k
+
+# bias 170 V, 119 uA
+modrun 692 1202k
+run 35979  
+
+# bias 170 V, 117 uA
+modrun 693 3503k
+run 35980
+
+
+turn 22
+
+geo geo_2019_04b.dat
+
+modrun 731
+run 36020
